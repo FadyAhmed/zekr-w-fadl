@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Switch } from "react-router-dom";
+import "./App.css";
+import Layout from "./components/layout/Layout";
+import Azkar from "./pages/Azkar";
+import Quran from "./pages/Quran";
+import Salawat from "./pages/Salawat";
+import ExactZekr from "./pages/ExcactZekr";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      <Switch>
+        <Route path="/azkar" exact>
+          <Azkar />
+        </Route>
+        <Route path="/azkar/exact-zekr/:zekrType">
+          <ExactZekr></ExactZekr>
+        </Route>
+        <Route path="/quran">
+          <Quran />
+        </Route>
+        <Route path="/salat">
+          <Salawat />
+        </Route>
+      </Switch>
+    </Layout>
   );
 }
 

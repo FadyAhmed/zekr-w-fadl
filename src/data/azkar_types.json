@@ -1,0 +1,83 @@
+[
+  {
+    "id": "day_azkar",
+    "azkar": "day_azkar.json",
+    "title": "اذكار الصباح",
+    "logo": "day.jpg"
+  },
+  {
+    "id": "night_azkar",
+    "azkar": "night_azkar.json",
+    "title": "اذكار المساء",
+    "logo": "night.jpg"
+  },
+  {
+    "id": "clothoff_azkar",
+    "azkar": "clothoff_azkar.json",
+    "title": "ذكر الثوب",
+    "logo": "clothes.png"
+  },
+  {
+    "id": "bathroom_azkar",
+    "azkar": "bathroom_azkar.json",
+    "title": "الدخول والخروج من الخلاء",
+    "logo": "bathroom.png"
+  },
+
+  {
+    "id": "entering_home_azkar",
+    "azkar": "entering_home_azkar.json",
+    "title": "دخول المنزل",
+    "logo": "inhouse.png"
+  },
+  {
+    "id": "exiting_home_azkar",
+    "azkar": "exiting_home_azkar.json",
+    "title": "الخروج من المنزل",
+    "logo": "outhouse.png"
+  },
+  {
+    "id": "entering_masjed_azkar",
+    "azkar": "entering_masjid_azkar.json",
+    "title": "دخول المسجد",
+    "logo": "inmosque.png"
+  },
+  {
+    "id": "exiting_masjed_azkar",
+    "azkar": "exiting_masjid_azkar.json",
+    "title": "الخروج من المسجد",
+    "logo": "outmosque.png"
+  },
+  {
+    "id": "prayer_azkar",
+    "title": "اذكار الصلاة",
+    "logo": "salat.png",
+    "azkar": "prayer_azkar.json"
+  },
+  {
+    "title": "اذكار النوم",
+    "logo": "sleep.jpg"
+  },
+  {
+    "id": "market_azkar",
+    "azkar": "market_azkar.json",
+    "title": "اذكار السوق",
+    "logo": "souq.png"
+  },
+  {
+    "id": "tasbeeh",
+    "azkar": "tasbeeh.json",
+    "title": "صفة التسبيح",
+    "logo": "tasbeeh.png"
+  },
+  {
+    "id": "abultion_azkar",
+    "azkar": "abultion_azkar.json",
+    "title": "اذكار الوضوء",
+    "logo": "tawado2.png"
+  },
+  {
+    "title": "اذكار الاستيقاظ",
+    "logo": "wakeup.jpg"
+  }
+]
