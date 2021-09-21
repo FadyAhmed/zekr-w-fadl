@@ -1,0 +1,24 @@
+.prayerTimesPage {
+  justify-content: center;
+}
+
+.prayerTimes {
+  direction: rtl;
+  text-align: center;
+  margin-top: 16px;
+  display: block;
+  background-color: white;
+  border-radius: 15px;
+  line-height: 18px;
+  justify-content: center;
+}
+
+.date {
+  justify-content: center;
+}
+
+.nextPrayer {
+  direction: rtl;
+  text-align: right;
+  padding-right: 15px;
+}

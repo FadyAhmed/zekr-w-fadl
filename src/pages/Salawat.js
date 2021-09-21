@@ -1,4 +1,6 @@
+import PrayerTimes from "../components/prayers/PrayerTimes";
+
 const Salawat = (props) => {
-  return <div className="centered">Salat</div>;
+  return <PrayerTimes />;
 };
 export default Salawat;

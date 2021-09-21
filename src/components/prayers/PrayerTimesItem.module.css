@@ -1,0 +1,15 @@
+.salatItem {
+  margin: 10px 16px;
+  background-color: rgb(247, 237, 237);
+  border-radius: 12px;
+  padding: 6px 12px 16px 12px;
+}
+
+.salatItem h3 {
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+
+.current {
+  background-color: rgb(241, 184, 29);
+}

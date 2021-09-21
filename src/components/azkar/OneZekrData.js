@@ -1,11 +1,21 @@
 import Grid from "@material-ui/core/grid";
 import Soon from "../UI/Soon";
 import classes from "./OneZekrData.module.css";
+import azkarTypes from "../../data/azkar_types.json";
 
 const OneZekrData = (props) => {
+  let pageTitle;
+  try {
+    pageTitle = azkarTypes.filter((zekr) => zekr.id === props.zekrType)[0]
+      .title;
+  } catch (e) {
+    pageTitle = "";
+  }
+
   if (props.zekrType === "undefined") {
     return <Soon></Soon>;
   }
+
   const azkarData = require(`../../data/${props.zekrType}.json`);
 
   if (!azkarData) {
@@ -14,7 +24,8 @@ const OneZekrData = (props) => {
 
   return (
     <div className={classes.page}>
-      {azkarData.map((zekr) => {
+      <h1 className={classes.pageTitle}>({pageTitle})</h1>
+      {azkarData.map((zekr, index) => {
         return (
           <Grid container xs={12}>
             <Grid item xs={0} md={2}></Grid>
