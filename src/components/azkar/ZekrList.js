@@ -1,4 +1,4 @@
-import Grid from "@material-ui/core/Grid";
+import Grid from '@mui/material/Grid';
 import AZKAR_TYPES from "../../data/azkar_types.json";
 import ZekrItem from "./ZekrItem";
 

@@ -1,4 +1,4 @@
-import Grid from "@material-ui/core/Grid";
+import Grid from '@mui/material/Grid';
 import { NavLink, Route, useRouteMatch, Switch } from "react-router-dom";
 import ExactZekr from "../../pages/ExcactZekr";
 import classes from "./ZekrItem.module.css";

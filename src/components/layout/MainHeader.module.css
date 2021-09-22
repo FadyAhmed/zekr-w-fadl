@@ -9,11 +9,14 @@
 
 .logo {
   text-align: end;
-  margin-right: 15px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .logo img {
   height: 4rem;
+  padding-right: 0.5em;
 }
 
 .tabs {
@@ -31,4 +34,10 @@
 .activeTab {
   background-color: chocolate;
   border-radius: 12px;
+}
+
+@media (max-width: 500px) {
+  .tabs {
+    visibility: hidden;
+  }
 }

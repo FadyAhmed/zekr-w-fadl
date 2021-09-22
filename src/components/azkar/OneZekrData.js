@@ -1,4 +1,4 @@
-import Grid from "@material-ui/core/grid";
+import Grid from '@mui/material/Grid';
 import Soon from "../UI/Soon";
 import classes from "./OneZekrData.module.css";
 import azkarTypes from "../../data/azkar_types.json";

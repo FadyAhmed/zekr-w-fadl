@@ -1,0 +1,47 @@
+.drawer {
+  background-color: transparent;
+}
+
+.drawer-icon {
+  display: none;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+.logo {
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.logo img {
+  height: 10rem;
+  padding-right: 0.1em;
+  text-align: center;
+  justify-content: center;
+}
+
+.activeTab {
+  background-color: chocolate;
+}
+
+.singleTab {
+  color: white;
+  text-decoration: none;
+  width: 100%;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 20px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.singleTab:hover {
+  background-color: rgb(187, 110, 55);
+}
+
+@media (max-width: 500px) {
+  .drawer-icon {
+    display: block;
+  }
+}

@@ -19,7 +19,7 @@ function App() {
         <Route path="/quran">
           <Quran />
         </Route>
-        <Route path="/salat">
+        <Route path="/prayer-times">
           <Salawat />
         </Route>
       </Switch>

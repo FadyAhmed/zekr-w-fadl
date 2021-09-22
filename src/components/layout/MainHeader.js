@@ -1,6 +1,7 @@
+import Grid from "@mui/material/Grid";
 import { NavLink } from "react-router-dom";
+import TemporaryDrawer from "./Drawer";
 import classes from "./MainHeader.module.css";
-import Grid from "@material-ui/core/Grid";
 
 const MainHeader = (props) => {
   const logo = `${process.env.PUBLIC_URL}/assets/logo.png`;
@@ -19,7 +20,7 @@ const MainHeader = (props) => {
         <NavLink
           className={classes.singleTab}
           activeClassName={classes.activeTab}
-          to="/salat"
+          to="/prayer-times"
         >
           مواقيت الصلاة
         </NavLink>
@@ -32,9 +33,14 @@ const MainHeader = (props) => {
         </NavLink>
       </Grid>
       <Grid lg={2} xs={2} className={classes.logo}>
-        <NavLink to="/" className={classes.logo}>
-          <img src={logo} alt="Logo" />
-        </NavLink>
+        <Grid lg={1} xs={1}>
+          <NavLink to="/" className={classes.logo}>
+            <img src={logo} alt="Logo" />
+          </NavLink>
+        </Grid>
+        <Grid lg={0} xs={0}>
+          <TemporaryDrawer />
+        </Grid>
       </Grid>
     </Grid>
   );

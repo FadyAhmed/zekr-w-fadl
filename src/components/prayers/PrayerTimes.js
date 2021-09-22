@@ -1,4 +1,4 @@
-import { Grid } from "@material-ui/core";
+import Grid from '@mui/material/Grid';
 import datetimeDifference from "datetime-difference";
 import { useCallback, useEffect, useState } from "react";
 import classes from "./PrayerTimes.module.css";

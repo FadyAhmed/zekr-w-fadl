@@ -1,5 +1,5 @@
 import classes from "./PrayerTimesItem.module.css";
-import { Grid } from "@material-ui/core";
+import Grid from '@mui/material/Grid';
 
 const PrayerTimesItem = (props) => {
   const nextClass = props.current === props.index ? classes.current : "";
