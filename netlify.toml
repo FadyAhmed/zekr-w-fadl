@@ -4,7 +4,8 @@
 	cache-control = '''
 	max-age=2419200,
 	public,
-	must-revalidate''',
+	must-revalidate'''
+[[headers]]
   for = "/azkar"
   [headers.values]
 	cache-control = '''
