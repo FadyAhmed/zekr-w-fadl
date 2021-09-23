@@ -6,3 +6,7 @@
   for = "/*"
   [headers.values]
 	cache-control = "max-age=2419200, public"
+[[redirects]]
+  from = "/*"
+  to = "/"
+  status = 200
