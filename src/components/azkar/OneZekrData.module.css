@@ -9,7 +9,7 @@
 }
 
 .page {
-  margin: 20px 0px;
+  margin: 20px 1em 20px 0px;
 }
 
 .rtl {
@@ -24,6 +24,7 @@
   font-size: 18px;
   font-weight: bold;
   margin: 3px 0px;
+  text-align: justify;
 }
 
 .repetations {
@@ -34,10 +35,11 @@
   font-size: 15px;
   margin-top: 5px;
   color: rgb(133, 129, 129);
+  text-align: justify;
 }
 
 .order {
-  margin: 1.5px 10px;
+  margin: 1.5px 14px 1.5px 10px;
   padding: 10px;
   border: solid rgb(235, 139, 71) 1.5px;
   width: 9px;

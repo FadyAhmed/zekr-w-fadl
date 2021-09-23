@@ -3,7 +3,7 @@
   "name": "Zekr W Fadl",
   "icons": [
     {
-      "src": "logo.png",
+      "src": "./assets/logo.png",
       "type": "image/png",
       "sizes": "192x192"
     }

@@ -1,4 +1,4 @@
-import Grid from '@mui/material/Grid';
+import Grid from "@mui/material/Grid";
 import Soon from "../UI/Soon";
 import classes from "./OneZekrData.module.css";
 import azkarTypes from "../../data/azkar_types.json";
@@ -25,10 +25,10 @@ const OneZekrData = (props) => {
   return (
     <div className={classes.page}>
       <h1 className={classes.pageTitle}>({pageTitle})</h1>
-      {azkarData.map((zekr, index) => {
+      {azkarData.map((zekr) => {
         return (
           <Grid container xs={12}>
-            <Grid item xs={0} md={2}></Grid>
+            <Grid item xs={1} md={2}></Grid>
             <Grid xs={10} md={8}>
               <div className={classes.zekrData}>
                 <div className={`${classes.rtl} + ' '+ ${classes.title}`}>
@@ -46,7 +46,7 @@ const OneZekrData = (props) => {
               </div>
               <hr />
             </Grid>
-            <Grid item xs={2} md={2}>
+            <Grid container xs={1} md={2}>
               <div className={classes.order}>{zekr.priority}</div>
             </Grid>
           </Grid>
