@@ -1,14 +1,6 @@
 [[headers]]
-  for = "/*"
-  [headers.values]
-	cache-control = '''
-	max-age=2419200,
-	public,
-	must-revalidate'''
   for = "/azkar"
   [headers.values]
 	cache-control = '''
 	max-age=2419200,
-	public,
-	must-revalidate'''
-
+	public
