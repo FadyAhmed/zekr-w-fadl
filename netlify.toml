@@ -1,6 +1,8 @@
 [[headers]]
   for = "/azkar"
   [headers.values]
-	cache-control = '''
-	max-age=2419200,
-	public '''
+	cache-control = "max-age=2419200, public"
+[[headers]]
+  for = "/*"
+  [headers.values]
+	cache-control = "max-age=2419200, public"
