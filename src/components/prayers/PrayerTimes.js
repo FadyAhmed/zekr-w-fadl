@@ -1,4 +1,4 @@
-import Grid from '@mui/material/Grid';
+import Grid from "@mui/material/Grid";
 import datetimeDifference from "datetime-difference";
 import { useCallback, useEffect, useState } from "react";
 import classes from "./PrayerTimes.module.css";
@@ -105,12 +105,10 @@ const PrayerTimes = (props) => {
     const now = { hour: date.getHours(), minute: date.getMinutes() };
     const today = mm + "/" + dd + "/" + yyyy;
 
-    const result = datetimeDifference(
-      new Date(
-        `${today}, ${now.hour}:${now.minute} ${now.hour >= 12 ? "PM" : "AM"}`
-      ),
-      new Date(`${today}, ${next}`)
-    );
+    const currentDate = new Date(mm, dd, yyyy, now.hour, now.minute);
+
+    const nextDate = new Date(`${today}, ${next}`);
+    const result = datetimeDifference(currentDate, nextDate);
 
     const hours =
       result.hours === 0
