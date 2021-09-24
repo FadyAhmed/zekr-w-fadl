@@ -1,0 +1,16 @@
+.topMargin {
+  height: 5rem;
+}
+
+.bottomMargin {
+  height: 0rem;
+}
+
+@media (max-width: 500px) {
+  .topMargin {
+    height: 0px;
+  }
+  .bottomMargin {
+    height: 3.5rem;
+  }
+}

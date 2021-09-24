@@ -7,7 +7,7 @@ const ZekrItem = (props) => {
   const match = useRouteMatch();
 
   return (
-    <Grid item xs={6} sm={4} md={3} title={props.title}>
+    <Grid item xs={4} sm={4} md={3} title={props.title}>
       <NavLink
         to={`${match.url}/exact-zekr/${props.id}`}
         className={classes.title}
