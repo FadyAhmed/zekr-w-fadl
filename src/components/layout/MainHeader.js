@@ -34,9 +34,9 @@ const MainHeader = (props) => {
       </Grid>
       <Grid lg={2} xs={2} className={classes.logo}>
         <Grid lg={1} xs={1}>
-          <NavLink to="/" className={classes.logo}>
+          <div className={classes.logo}>
             <img src={logo} alt="Logo" />
-          </NavLink>
+          </div>
         </Grid>
         <Grid lg={0} xs={0}>
           <TemporaryDrawer />

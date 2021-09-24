@@ -1,4 +1,4 @@
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import "./App.css";
 import Layout from "./components/layout/Layout";
 import Azkar from "./pages/Azkar";
@@ -10,6 +10,7 @@ function App() {
   return (
     <Layout>
       <Switch>
+        <Redirect from="/" to="/azkar" exact />
         <Route path="/azkar" exact>
           <Azkar />
         </Route>
