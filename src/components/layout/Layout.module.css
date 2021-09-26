@@ -6,7 +6,7 @@
   height: 0rem;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .topMargin {
     height: 0px;
   }

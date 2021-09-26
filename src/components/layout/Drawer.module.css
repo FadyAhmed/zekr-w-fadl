@@ -40,8 +40,52 @@
   background-color: rgb(187, 110, 55);
 }
 
-@media (max-width: 500px) {
+.appBar {
+  direction: rtl;
+  background-color: rgb(250, 250, 250);
+  z-index: 0;
+  box-shadow: none;
+}
+
+.appBar IconButton {
+  color: black;
+  padding: 12px;
+}
+
+.logo {
+  text-align: end;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.logo img {
+  height: 4rem;
+}
+
+.singleTab {
+  color: rgb(53, 52, 52);
+  text-decoration: none;
+  padding: 0px;
+}
+
+.activeTab {
+  background-color: #dbdbdb;
+}
+
+.singleTab:hover {
+  background-color: #ebebeb;
+}
+
+.drawerPaper {
+  width: 525px;
+}
+
+@media (max-width: 600px) {
   .drawer-icon {
     display: block;
+  }
+  .hide {
+    display: none !important;
   }
 }
