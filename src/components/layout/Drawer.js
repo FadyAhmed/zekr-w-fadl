@@ -21,6 +21,7 @@ import Typography from "@mui/material/Typography";
 import * as React from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import classes from "./Drawer.module.css";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const drawerWidth = 240;
 
@@ -32,8 +33,9 @@ const openedMixin = (theme) => ({
   }),
 });
 
-const closedMixin = (theme) => ({
+const closedMixin = (theme, mobile) => ({
   // mob
+  width: !mobile ? 0 : drawerWidth,
 
   transition: theme.transitions.create("width", {
     easing: theme.transitions.easing.sharp,
@@ -48,7 +50,7 @@ const closedMixin = (theme) => ({
 const DrawerHeader = styled("div")(({ theme }) => ({
   display: "flex",
   alignItems: "center",
-  justifyContent: "flex-start",
+  justifyContent: "space-between",
   padding: theme.spacing(0, 1),
   // necessary for content to be below app bar
   ...theme.mixins.toolbar,
@@ -56,14 +58,18 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== "open",
-})(({ theme, open }) => ({
-  zIndex: theme.zIndex.drawer + 1,
+})(({ theme, open, mobile }) => ({
+  // mob remove
+  zIndex: mobile ? theme.zIndex.drawer + 1 : theme.zIndex.drawer - 10,
+
   transition: theme.transitions.create(["width", "margin"], {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen,
   }),
   ...(open && {
-    marginRight: drawerWidth,
+    // mob
+    marginRight: !mobile ? -drawerWidth : drawerWidth,
+
     width: `calc(100% - ${drawerWidth}px)`,
     transition: theme.transitions.create(["width", "margin"], {
       easing: theme.transitions.easing.sharp,
@@ -74,7 +80,7 @@ const AppBar = styled(MuiAppBar, {
 
 const Drawer = styled(MuiDrawer, {
   shouldForwardProp: (prop) => prop !== "open",
-})(({ theme, open }) => ({
+})(({ theme, open, mobile }) => ({
   width: drawerWidth,
   flexShrink: 0,
   whiteSpace: "nowrap",
@@ -83,18 +89,21 @@ const Drawer = styled(MuiDrawer, {
   ...(open && {
     ...openedMixin(theme),
     "& .MuiDrawer-paper": openedMixin(theme),
+
+    // mob
+    width: !mobile ? 0 : drawerWidth,
   }),
 
   ...(!open && {
-    ...closedMixin(theme),
-    "& .MuiDrawer-paper": closedMixin(theme),
+    ...closedMixin(theme, mobile),
+    "& .MuiDrawer-paper": closedMixin(theme, mobile),
   }),
 }));
 
 export default function MiniDrawer(props) {
   const logo = `${process.env.PUBLIC_URL}/assets/logo.png`;
   const location = useLocation();
-  console.log(location.pathname);
+  const mobile = useMediaQuery("(min-width:600px)");
 
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
@@ -114,6 +123,7 @@ export default function MiniDrawer(props) {
         className={classes.hide}
         position="fixed"
         open={open}
+        mobile={mobile}
         sx={{ boxShadow: "none", height: "64px" }}
       >
         <Toolbar className={classes.appBar}>
@@ -131,13 +141,14 @@ export default function MiniDrawer(props) {
           </IconButton>
           <Typography variant="h6" noWrap component="div">
             <div className={classes.logo}>
-              <img src={logo} alt="Logo" />
+              <img src={logo} alt="Logo" className={classes.hide} />
             </div>
           </Typography>
         </Toolbar>
       </AppBar>
+
       <Box component="main" style={{ width: "100%" }}>
-        <DrawerHeader className={classes.hide} />
+        <DrawerHeader></DrawerHeader>
         <div>{props.children}</div>
       </Box>
 
@@ -145,16 +156,18 @@ export default function MiniDrawer(props) {
         variant="permanent"
         open={open}
         anchor="right"
+        mobile={mobile}
         className={classes.hide}
       >
-        <DrawerHeader>
+        <DrawerHeader className={classes.drawerHeader}>
           <IconButton onClick={handleDrawerClose}>
-            {theme.direction === "ltr" ? (
-              <ChevronRightIcon />
-            ) : (
-              <ChevronLeftIcon />
-            )}
+            <ChevronRightIcon />
           </IconButton>
+          {!mobile && (
+            <div className={classes.logo}>
+              <img src={logo} alt="Logo" className={classes.hide} />
+            </div>
+          )}
         </DrawerHeader>
         <Divider />
         <List>
@@ -176,6 +189,9 @@ export default function MiniDrawer(props) {
             },
           ].map((link) => (
             <NavLink
+              onClick={() => {
+                setOpen(false);
+              }}
               to={link.to}
               className={classes.singleTab}
               activeClassName={classes.activeTab}

@@ -11,7 +11,7 @@
 
 .logo {
   text-align: center;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
 }
 
 .logo img {
@@ -57,10 +57,12 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  padding-top: 10px;
 }
 
 .logo img {
-  height: 4rem;
+  height: 3.8rem;
+  align-items: center;
 }
 
 .singleTab {
@@ -81,11 +83,35 @@
   width: 525px;
 }
 
+.drawerHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.headerLogo {
+  display: none;
+  text-align: end;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.headerLogo img {
+  height: 3.8rem;
+  align-items: center;
+}
+
 @media (max-width: 600px) {
   .drawer-icon {
     display: block;
   }
-  .hide {
+
+  .headerLogo {
     display: none !important;
   }
+
+  /* .hide {
+    display: none !important;
+  } */
 }
