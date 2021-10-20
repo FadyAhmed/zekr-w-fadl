@@ -36,8 +36,11 @@
   border-radius: 12px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .tabs {
     visibility: hidden;
+  }
+  .mainHeader {
+    display: none;
   }
 }
