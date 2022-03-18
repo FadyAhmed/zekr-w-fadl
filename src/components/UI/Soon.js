@@ -3,7 +3,7 @@ const Soon = (props) => {
 
   return (
     <div className="centered">
-      <img src={soonImg} alt="قريباً" />
+      <img width='150px' height='300px' src={soonImg} alt="قريباً" />
     </div>
   );
 };
