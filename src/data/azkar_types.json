@@ -55,8 +55,10 @@
     "azkar": "prayer_azkar.json"
   },
   {
+    "id": "sleep_azkar",
     "title": "اذكار النوم",
-    "logo": "sleep.jpg"
+    "logo": "sleep.jpg",
+    "azkar": "sleep_azkar.json"
   },
   {
     "id": "market_azkar",

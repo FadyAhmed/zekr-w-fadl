@@ -3,6 +3,7 @@ import OneZekrData from "../components/azkar/OneZekrData";
 
 const ExactZekr = (props) => {
   const params = useParams();
+
   return <OneZekrData zekrType={params.zekrType}></OneZekrData>;
 };
 
