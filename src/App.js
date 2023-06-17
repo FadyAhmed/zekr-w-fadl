@@ -1,29 +1,34 @@
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Routes, BrowserRouter, redirect } from "react-router-dom";
 import "./App.css";
 import Layout from "./components/layout/Layout";
 import Azkar from "./pages/Azkar";
-import Quran from "./pages/Quran";
-import Salawat from "./pages/Salawat";
 import ExactZekr from "./pages/ExcactZekr";
 
 function App() {
   return (
     <Layout>
-      <Switch>
-        <Redirect from="/" to="/azkar" exact />
-        <Route path="/azkar" exact>
-          <Azkar />
+      <Routes>
+        <Route path="/" exact>
+          <Route path="" element={<Azkar />}></Route>
+          <Route
+            path="exact-zekr/:zekrType"
+            element={<ExactZekr></ExactZekr>}
+          ></Route>
         </Route>
-        <Route path="/azkar/exact-zekr/:zekrType">
-          <ExactZekr></ExactZekr>
+        <Route path="/azkar">
+          <Route path="" element={<Azkar />}></Route>
+          <Route
+            path="exact-zekr/:zekrType"
+            element={<ExactZekr></ExactZekr>}
+          ></Route>
         </Route>
-        <Route path="/quran">
+        {/* <Route path="/quran">
           <Quran />
         </Route>
         <Route path="/prayer-times">
           <Salawat />
-        </Route>
-      </Switch>
+        </Route> */}
+      </Routes>
     </Layout>
   );
 }

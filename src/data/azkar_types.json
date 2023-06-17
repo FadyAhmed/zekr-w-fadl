@@ -55,8 +55,10 @@
     "azkar": "prayer_azkar.json"
   },
   {
+    "id": "sleep_azkar",
     "title": "اذكار النوم",
-    "logo": "sleep.jpg"
+    "logo": "sleep.jpg",
+    "azkar": "sleep_azkar.json"
   },
   {
     "id": "market_azkar",
@@ -69,15 +71,5 @@
     "azkar": "tasbeeh.json",
     "title": "صفة التسبيح",
     "logo": "tasbeeh.png"
-  },
-  {
-    "id": "abultion_azkar",
-    "azkar": "abultion_azkar.json",
-    "title": "اذكار الوضوء",
-    "logo": "tawado2.png"
-  },
-  {
-    "title": "اذكار الاستيقاظ",
-    "logo": "wakeup.jpg"
   }
 ]
