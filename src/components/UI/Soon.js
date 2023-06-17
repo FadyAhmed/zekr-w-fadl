@@ -7,4 +7,5 @@ const Soon = (props) => {
     </div>
   );
 };
+
 export default Soon;

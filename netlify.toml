@@ -8,5 +8,5 @@
 	cache-control = "max-age=1, public"
 [[redirects]]
   from = "/*"
-  to = "/"
+  to = "/azkar"
   status = 200
