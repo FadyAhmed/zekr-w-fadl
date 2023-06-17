@@ -3,7 +3,6 @@
   height: 5rem;
   background-color: brown;
   align-items: center;
-  display: flex;
   position: fixed;
 }
 
@@ -32,8 +31,12 @@
 }
 
 .activeTab {
+  text-decoration: none;
+  color: rgb(255, 228, 228);
+  width: 100%;
   background-color: chocolate;
   border-radius: 12px;
+  padding: 15px;
 }
 
 @media (max-width: 500px) {

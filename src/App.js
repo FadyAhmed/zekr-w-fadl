@@ -1,4 +1,4 @@
-import { Route, Routes, BrowserRouter } from "react-router-dom";
+import { Route, Routes, BrowserRouter, redirect } from "react-router-dom";
 import "./App.css";
 import Layout from "./components/layout/Layout";
 import Azkar from "./pages/Azkar";
@@ -9,8 +9,8 @@ function App() {
     <Layout>
       <Routes>
         {/* <Route path="/" exact>
-            <Redirect to="/azkar" />
-          </Route> */}
+          <redirect to="/azkar" />
+        </Route> */}
         <Route path="/azkar">
           <Route path="" element={<Azkar />}></Route>
           <Route
