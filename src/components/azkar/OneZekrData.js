@@ -64,9 +64,7 @@ const OneZekrData = (props) => {
               {azkarData.length - 1 !== index && <hr />}
             </Grid>
             <Grid container xs={1} md={2}>
-              <div className={classes.order}>
-                <p>{zekr.priority}</p>
-              </div>
+              <div className={classes.order}>{zekr.priority}</div>
             </Grid>
           </Grid>
         );
