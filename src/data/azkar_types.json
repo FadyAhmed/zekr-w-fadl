@@ -71,15 +71,5 @@
     "azkar": "tasbeeh.json",
     "title": "صفة التسبيح",
     "logo": "tasbeeh.png"
-  },
-  {
-    "id": "abultion_azkar",
-    "azkar": "abultion_azkar.json",
-    "title": "اذكار الوضوء",
-    "logo": "tawado2.png"
-  },
-  {
-    "title": "اذكار الاستيقاظ",
-    "logo": "wakeup.jpg"
   }
 ]

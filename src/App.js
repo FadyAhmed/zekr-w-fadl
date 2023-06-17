@@ -8,9 +8,13 @@ function App() {
   return (
     <Layout>
       <Routes>
-        {/* <Route path="/" exact>
-          <redirect to="/azkar" />
-        </Route> */}
+        <Route path="/" exact>
+          <Route path="" element={<Azkar />}></Route>
+          <Route
+            path="exact-zekr/:zekrType"
+            element={<ExactZekr></ExactZekr>}
+          ></Route>
+        </Route>
         <Route path="/azkar">
           <Route path="" element={<Azkar />}></Route>
           <Route

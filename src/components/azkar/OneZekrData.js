@@ -25,7 +25,7 @@ const OneZekrData = (props) => {
   return (
     <div className={classes.page}>
       <h1 className={classes.pageTitle}>({pageTitle})</h1>
-      {azkarData.map((zekr) => {
+      {azkarData.map((zekr, index) => {
         return (
           <Grid container xs={12}>
             <Grid item xs={1} md={2}></Grid>
@@ -44,7 +44,7 @@ const OneZekrData = (props) => {
                   {zekr.hadith}
                 </div>
               </div>
-              <hr />
+              {azkarData.length - 1 !== index && <hr />}
             </Grid>
             <Grid container xs={1} md={2}>
               <div className={classes.order}>{zekr.priority}</div>
