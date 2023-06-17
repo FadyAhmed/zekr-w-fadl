@@ -4,6 +4,7 @@
   background-color: brown;
   align-items: center;
   position: fixed;
+  z-index: 100;
 }
 
 .logo {

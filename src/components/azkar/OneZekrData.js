@@ -38,7 +38,7 @@ const OneZekrData = (props) => {
         <p onClick={() => setShow(!show)} style={{ fontWeight: "bold" }}>
           إظهار الحديث
         </p>
-        <Checkbox checked={show} onChange={() => setShow(!show)} />
+        <Checkbox sx={{zIndex:0}} checked={show} onChange={() => setShow(!show)} />
       </div>
       {azkarData.map((zekr, index) => {
         return (
