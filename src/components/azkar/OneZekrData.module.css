@@ -40,21 +40,16 @@
 
 .order {
   margin: 1.5px 14px 1.5px 10px;
-  padding: 16px;
+  padding: 10px;
   border: solid rgb(235, 139, 71) 1.5px;
-  width: 16px;
-  height: 16px;
+  width: 9px;
+  height: 9px;
   font-size: 100%;
   line-height: 9px;
   border-radius: 50%;
   background-color: rgb(235, 139, 71);
   color: white;
+  display: flex;
+  text-align: center;
   justify-content: center;
-  display: flex;
-}
-.order p {
-  margin: 0;
-  padding: 0;
-  margin-top: -3px;
-  display: flex;
 }
